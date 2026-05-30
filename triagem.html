@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Triagem</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='triagem.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Hospital</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="triagem.html">Triagem</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <form method="get" action="relatoriotriagem.html" class="row g-3 needs-validation" novalidate>
+
+        <div class="col-md-3">
+            <label for="inputNome" class="form-label">Nome</label>
+            <input type="text" class="form-control" placeholder="Insira o nome" id="inputNome" name="nome" required>
+            <div class="invalid-feedback">Coloque um nome</div>
+        </div>
+
+        <div class="col-md-3">
+            <label for="inputNascimento" class="form-label">Data de nascimento:</label>
+            <div class="input-group has-validation">
+                <input type="date" class="form-control" id="inputNascimento" name="nascimento" required>
+                <div class="invalid-feedback">Coloque uma data de nascimento</div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <label for="inputCpf" class="form-label">CPF:</label>
+            <input type="text" name="cpf" placeholder="000.000.000-00" class="form-control" id="inputCpf" required>
+            <div class="invalid-feedback">Coloque um CPF válido!</div>
+        </div>
+
+        <div class="col-md-2">
+            <label for="inputTelefone" class="form-label">Telefone:</label>
+            <input type="tel" name="telefone" placeholder="61-99854-1512" class="form-control" id="inputTelefone" required>
+            <div class="invalid-feedback">Coloque um telefone válido!</div>
+        </div>
+
+        <div class="col-md-3">
+            <label for="inputSexo" class="form-label">Gênero</label>
+            <select name="sexo" class="form-select" id="inputSexo" required>
+                <option selected disabled value="">Escolha</option>
+                <option>Mulher</option>
+                <option>Homem</option>
+                <option>Outros</option>
+            </select>
+            <div class="invalid-feedback">Coloque o Gênero correto</div>
+        </div>
+
+        <div class="col-md-2">
+            <label for="inputFrequencia" class="form-label">Frequência cardíaca</label>
+            <input type="number" class="form-control" placeholder="Insira um valor" id="inputFrequencia" name="frencorpo" required>
+            <div class="invalid-feedback">Coloque a Frequência cardíaca correta</div>
+        </div>
+
+        <div class="col-md-2">
+            <label for="inputPressao" class="form-label">Pressão arterial</label>
+            <input type="number" class="form-control" placeholder="Insira um valor" id="inputPressao" name="presscorpo" required>
+            <div class="invalid-feedback">Coloque a Pressão arterial correta</div>
+        </div>
+
+        <div class="col-md-2">
+            <label for="inputSaturacao" class="form-label">Saturação de oxigênio</label>
+            <input type="number" class="form-control" placeholder="Insira um valor" id="inputSaturacao" name="saturacorpo" required>
+            <div class="invalid-feedback">Coloque a Saturação de oxigênio correta</div>
+        </div>
+
+        <div class="col-md-2">
+            <label for="inputTemperatura" class="form-label">Temperatura corporal</label>
+            <input type="text" class="form-control" placeholder="Insira um valor" id="inputTemperatura" name="tempcorpo" required>
+            <div class="invalid-feedback">Coloque a Temperatura corporal correta</div>
+        </div>
+
+        <h4>Selecione as condições de saúde:</h4>
+        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="hipercorpo">
+            <label class="btn btn-outline-primary" for="btncheck1">Hipertensão arterial</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" name="obesidadecorpo">
+            <label class="btn btn-outline-primary" for="btncheck2">Obesidade</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" name="asmacorpo">
+            <label class="btn btn-outline-primary" for="btncheck3">Asma</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off" name="renalcorpo">
+            <label class="btn btn-outline-primary" for="btncheck4">Doença renal crônica</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off" name="diabetescorpo">
+            <label class="btn btn-outline-primary" for="btncheck5">Diabetes Mellitus</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off" name="cardiacacorpo">
+            <label class="btn btn-outline-primary" for="btncheck6">Doença cardíaca</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off" name="dpoccorpo">
+            <label class="btn btn-outline-primary" for="btncheck7">DPOC</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off" name="cancercorpo">
+            <label class="btn btn-outline-primary" for="btncheck8">Câncer</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off" name="imunossuprimidocorpo">
+            <label class="btn btn-outline-primary" for="btncheck9">Imunossupressão</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck10" autocomplete="off" name="hepaticacorpo">
+            <label class="btn btn-outline-primary" for="btncheck10">Doença hepática crônica</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck11" autocomplete="off" name="neurologicacorpo">
+            <label class="btn btn-outline-primary" for="btncheck11">Doença neurológica</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck12" autocomplete="off" name="tireoidianacorpo">
+            <label class="btn btn-outline-primary" for="btncheck12">Distúrbio da tireoide</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck13" autocomplete="off" name="tabagismocorpo">
+            <label class="btn btn-outline-primary" for="btncheck13">Tabagismo</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck14" autocomplete="off" name="alcoolismocorpo">
+            <label class="btn btn-outline-primary" for="btncheck14">Alcoolismo</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck15" autocomplete="off" name="artritecorpo">
+            <label class="btn btn-outline-primary" for="btncheck15">Artrite/Reumatismo</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck16" autocomplete="off" name="nenhumacorpo">
+            <label class="btn btn-outline-secondary" for="btncheck16">Nenhuma das anteriores</label>
+        </div>
+
+        <h4>Digite os sintomas:</h4>
+        <div class="form-floating">
+            <textarea class="form-control" name="sintomascorpo" placeholder="Sintomas" id="floatingTextarea" required></textarea>
+            <label for="floatingTextarea">Sintomas</label>
+            <div class="invalid-feedback">Coloque algum sintoma</div>
+        </div>
+
+        <h4>Classificação de risco:</h4>
+        <div class="mx-auto">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="prioridade" id="radio1" value="azul"  >
+                <label class="form-check-label" for="radio1">🔵 Azul (Não urgente)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="prioridade" id="radio2" value="verde">
+                <label class="form-check-label" for="radio2">🟢 Verde (Pouco urgente)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="prioridade" id="radio3" value="amarelo">
+                <label class="form-check-label" for="radio3">🟡 Amarelo (Urgente)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="prioridade" id="radio4" value="laranja">
+                <label class="form-check-label" for="radio4">🟠 Laranja (Muito urgente)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="prioridade" id="radio5" value="vermelho">
+                <label class="form-check-label" for="radio5">🔴 Vermelho (Emergência)</label>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+    </form>
+
+    <footer>
+        <p>© 2025 Hospital. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="triagem.js"></script>
+</body>
+
+</html>
